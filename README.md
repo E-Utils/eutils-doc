@@ -2,7 +2,7 @@
 The documents about E-Utils
 
 # 一、规范文档
-    主要存放开发规范、git分支规范以及代码注释规范等;
+    主要存放开发规范、git分支规范以及代码注释规范等;
 
 # 二、设计文档
     主要存放所有方法的设计文档；
@@ -14,6 +14,6 @@ The documents about E-Utils
     文档仓库不会频繁提交，文档协同编写的也较少，因此只设立两类分支：
     1.master
       主分支，保留当前线上版本的所有官方文档;
-    2.release
+    2.release
       发布分支，为当前版本的文档分支，分支命名：
-      release_v + version (eg: release_v1.0.0)，版本发布后，文档同步编辑完成时，将文档合并到master;
+      release_v + version (eg: release_v1.0.0)，版本发布后，文档同步编辑完成时，将文档合并到master;
