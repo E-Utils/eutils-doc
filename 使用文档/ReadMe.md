@@ -17,7 +17,7 @@
       EUtils.dateFormat(1531643785284, 'yyyy-MM-dd');
       // => '2018-07-15';
 
-#Url
+# Url
 * ## setUrlParam(params, originUrl)<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url<br />
   <br />
