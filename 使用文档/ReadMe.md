@@ -19,11 +19,12 @@
 
 # Url
 * ## setUrlParam(params, originUrl)<br />
-  向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url<br />
+  向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
+  <br />
   <br />
   <b>Since</b>
   
-    1.0.0
+        1.0.0
   <b>Arguments</b>
   
       params(object)：需要添加的参数对象，如果key值再url中已存在，则会进行替换
@@ -45,7 +46,7 @@
   <br />
   <b>Since</b>
   
-    1.0.0
+        1.0.0
   <b>Arguments</b>
   
       key(string)：需要获取的参数key
