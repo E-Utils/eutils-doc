@@ -46,7 +46,7 @@
 
 # 五、git提交日志规范
     git commit 信息规范：
-    {type} － {event}
+        {type} － {event}
     eg:
         dev - 开发hello方法，返回hello字符串;
         test - 补充hello方法测试用例;
