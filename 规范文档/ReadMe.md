@@ -44,7 +44,14 @@
     ［基设］－ 脚手架代码覆盖率检测功能新增；
     ［其他］－ 任务细分；
 
-
+# 五、git提交日志规范
+    git commit 信息规范：
+    {type} － {event}
+    eg:
+        dev - 开发hello方法，返回hello字符串;
+        test - 补充hello方法测试用例;
+        doc - 补充hello方法使用文档;
+        bugFix - hello方法返回值错误bug修复; 
 
 
 
