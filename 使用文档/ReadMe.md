@@ -176,6 +176,6 @@
   ```
   <b>Example</b>
   ```
-    trim('𠮷abbb𠮷a', '𠮷a')
-    // => 'bbb'
+    trim(' abbb ')
+    // => 'abbb'
   ```
