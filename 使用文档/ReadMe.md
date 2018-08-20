@@ -24,7 +24,6 @@
 # Url
 * ## setUrlParam(params, originUrl)<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
-  </br>
 
   <b>Since</b>
   ```
@@ -50,7 +49,6 @@
       
 * ## getUrlParam(key, originUrl)<br />
   从当前Url或目标Url获取参数，originUrl不传则默认使用当前Url
-  </br>
 
   <b>Since</b>
   ```
@@ -69,4 +67,115 @@
   ```
     EUtils.getUrlParam('id', 'http://www.ewt360.com?id=1');
     // => 1
+  ```
+
+# String
+* ## repalce(str, pattern, replacement)<br />
+  将str字符串中指定的pattern字符替换成replacement字符，惰性匹配，匹配到一个就不会匹配后面的
+
+  <b>Since</b>
+  ```
+    1.0.0
+  ```
+  <b>Arguments</b>
+  ```
+    str： 原始串,
+    pattern：要替换的字符串或正则,
+    replacement：替换的目标字符串
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回替换后的字符串
+  ```
+  <b>Example</b>
+  ```
+    replace('hello world', /o/, 'hi')
+    // => 'hellhi world'
+  ```
+
+* ## repalceAll(str, sourcement, replacement)<br />
+  将str字符串中指定的sourcement字符全都替换成replacement字符
+
+  <b>Since</b>
+  ```
+    1.0.0
+  ```
+  <b>Arguments</b>
+  ```
+    str： 原始串,
+    sourcement：要替换的字符串或正则,
+    replacement：替换的目标字符串
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回替换后的字符串
+  ```
+  <b>Example</b>
+  ```
+    replaceAll('hello wOrld', /o/i, 'hi')
+    // => 'hellhi whirld'
+  ```
+
+* ## toLower(str)<br />
+  将str字符串大写全部转成小写
+
+  <b>Since</b>
+  ```
+    1.0.0
+  ```
+  <b>Arguments</b>
+  ```
+    str： 原始串
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回小写后的字符串
+  ```
+  <b>Example</b>
+  ```
+    toLower('hellO-wOrld')
+    // => 'hello-world'
+  ```
+
+* ## toUpper(str)<br />
+  将str字符串小写全部转成大写
+
+  <b>Since</b>
+  ```
+    1.0.0
+  ```
+  <b>Arguments</b>
+  ```
+    str： 原始串
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回大写后的字符串
+  ```
+  <b>Example</b>
+  ```
+    toUpper('hello-world')
+    // => 'HELLO-WORLD'
+  ```
+
+* ## trim(str, chars)<br />
+  将str字符串前后空格
+
+  <b>Since</b>
+  ```
+    1.0.0
+  ```
+  <b>Arguments</b>
+  ```
+    str： 原始串
+    chars: 去除后的替换成字符（省略此参数，就空格）
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回去除后的字符串
+  ```
+  <b>Example</b>
+  ```
+    trim('𠮷abbb𠮷a', '𠮷a')
+    // => 'bbb'
   ```
