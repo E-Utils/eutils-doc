@@ -181,7 +181,7 @@
   ```
 
 * ## generateUUID()<br />
-  生成唯一的通用标识符（UUID），可用于生成react的列表渲染时所需的key
+  生成唯一的通用标识符（UUID），可用于生成react的列表渲染时所需的key
 
   <b>Since</b>
   ```
