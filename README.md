@@ -1,5 +1,5 @@
-# Documents
-The documents about E-Utils
+# EUtils文档库
+所有与EUtils相关的文档，包含规范文档、设计文档、使用文档等
 
 # 一、规范文档
     主要存放开发规范、git分支规范以及代码注释规范等;
