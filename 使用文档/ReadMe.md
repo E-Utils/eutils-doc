@@ -179,3 +179,21 @@
     trim(' abbb ')
     // => 'abbb'
   ```
+
+* ## generateUUID()<br />
+  生成唯一的通用标识符（UUID），可用于生成react的列表渲染时所需的key
+
+  <b>Since</b>
+  ```
+    1.1.0
+  ```
+  <b>Returns</b>
+  ```
+    (string)：返回唯一的UUID
+  ```
+  <b>Example</b>
+  ```
+    generateUUID()
+
+    // => 'af22-3fa8-4028-8dea-30a2'
+  ```
