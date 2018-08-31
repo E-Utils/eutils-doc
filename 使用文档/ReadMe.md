@@ -216,3 +216,114 @@
     indexOf([1, 2, 1, 2], 2, 2)
     // => 3
   ```
+
+# Array
+* ## includes(collection, value, fromIndex)<br />
+  从fromIndex索引开始查找collection集合中是否存在value，惰性匹配，匹配到一个就不会匹配后面的，返回Boolean类型值
+  注意：fromIndex不支持负数，出现问题后果自负
+  <br />
+  <br />
+  <b>Since</b>
+
+        1.1.0
+  <b>Arguments</b>
+
+      collection： 集合|字符串|字面量对象,
+      value：要查找的值,
+      fromIndex：从指定索引开始查找
+
+  <b>Returns</b>
+
+      (boolean)：返回布尔值true|false
+  <b>Example</b>
+
+      includes('abccdd', 'cc')
+      // => true
+      includes({cc: 222}, 'cc')
+      // => true
+      includes(true, 'cc')
+      // => false
+      includes([1, 3, [1,2], {1:3}], {1:3})
+      // => true
+      includes([1, 3, [1,2], {1:3}], {1:3}, 4)
+      // => false
+
+* ## unique(arr, iterator)<br />
+  将arr中重复元素过滤，返回唯一元素新数组，支持对象的判断
+  <br />
+  <br />
+  <b>Since</b>
+
+        1.1.0
+  <b>Arguments</b>
+
+      arr： 数组,
+      iterator：过滤器方法,
+
+  <b>Returns</b>
+
+      (array)：返回不重复元素的数组
+  <b>Example</b>
+
+      unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
+      // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
+
+* ## union(firstArr, secondArr)<br />
+  将firstArr和secondArr数组合并，并过滤重复的元素，返回一个新的数组。
+  <br />
+  <br />
+  <b>Since</b>
+
+        1.1.0
+  <b>Arguments</b>
+
+      firstArr: 第一个数组
+      secondArr: 第二个数组
+
+  <b>Returns</b>
+
+      (array)：返回一个新的数组
+  <b>Example</b>
+
+      union([1, 3, 5],  [6, 8, 8, 6, 3])
+      // => [1, 3, 5, 6, 8]
+
+* ## minus(firstArr, secondArr)<br />
+  将firstArr与secondArr数组做差集，返回一个差集后的数组
+  <br />
+  <br />
+  <b>Since</b>
+
+        1.1.0
+  <b>Arguments</b>
+
+      firstArr: 第一个数组
+      secondArr: 第二个数组
+
+  <b>Returns</b>
+
+      (array)：返回一个新的数组
+  <b>Example</b>
+
+      minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
+      // => [1, 5]
+
+* ## intersection(firstArr, secondArr)<br />
+  将firstArr与secondArr数组做交集，返回一个交集后的数组
+  <br />
+  <br />
+  <b>Since</b>
+
+        1.1.0
+  <b>Arguments</b>
+
+      firstArr: 第一个数组
+      secondArr: 第二个数组
+
+  <b>Returns</b>
+
+      (array)：返回一个新的数组
+  <b>Example</b>
+
+      intersection([1, 3, 5, 6], [8, 8, 6, 3])
+      // => [3, 6]
