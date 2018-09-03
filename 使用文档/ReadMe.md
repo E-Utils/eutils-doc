@@ -1,5 +1,5 @@
 # Date
-* ## dateFormat(date, format)</br>
+* ## dateFormat</br>
   将日期按照指定格式格式化并返回格式化后的日期。
 
   <b>Since</b>
@@ -22,7 +22,7 @@
   ```
 
 # Url
-* ## setUrlParam(params, originUrl)<br />
+* ## setUrlParam<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
 
   <b>Since</b>
@@ -47,7 +47,7 @@
     // => http://www.ewt360.com?id=2&name=3
   ```
       
-* ## getUrlParam(key, originUrl)<br />
+* ## getUrlParam<br />
   从当前Url或目标Url获取参数，originUrl不传则默认使用当前Url
 
   <b>Since</b>
@@ -70,7 +70,7 @@
   ```
 
 # String
-* ## repalce(str, pattern, replacement)<br />
+* ## repalce<br />
   将str字符串中指定的pattern字符替换成replacement字符，惰性匹配，匹配到一个就不会匹配后面的
 
   <b>Since</b>
@@ -93,7 +93,7 @@
     // => 'hellhi world'
   ```
 
-* ## repalceAll(str, sourcement, replacement)<br />
+* ## repalceAll<br />
   将str字符串中指定的sourcement字符全都替换成replacement字符
 
   <b>Since</b>
@@ -116,7 +116,7 @@
     // => 'hellhi whirld'
   ```
 
-* ## toLower(str)<br />
+* ## toLower<br />
   将str字符串大写全部转成小写
 
   <b>Since</b>
@@ -137,7 +137,7 @@
     // => 'hello-world'
   ```
 
-* ## toUpper(str)<br />
+* ## toUpper<br />
   将str字符串小写全部转成大写
 
   <b>Since</b>
@@ -158,7 +158,7 @@
     // => 'HELLO-WORLD'
   ```
 
-* ## trim(str, chars)<br />
+* ## trim<br />
   将str字符串前后空格
 
   <b>Since</b>
@@ -180,7 +180,7 @@
     // => 'abbb'
   ```
 
-* ## generateUUID()<br />
+* ## generateUUID<br />
   生成唯一的通用标识符（UUID），可用于生成react的列表渲染时所需的key
 
   <b>Since</b>
@@ -197,7 +197,7 @@
 
     // => 'af22-3fa8-4028-8dea-30a2'
   ```
-* ## indexOf()<br />
+* ## indexOf<br />
   数组中查找指定字符
 
   <b>Since</b>
@@ -218,7 +218,7 @@
   ```
 
 # Array
-* ## includes(collection, value, fromIndex)<br />
+* ## includes<br />
   从fromIndex索引开始查找collection集合中是否存在value，惰性匹配，匹配到一个就不会匹配后面的，返回Boolean类型值
   注意：fromIndex不支持负数，出现问题后果自负
   <br />
@@ -248,7 +248,7 @@
       includes([1, 3, [1,2], {1:3}], {1:3}, 4)
       // => false
 
-* ## unique(arr, iterator)<br />
+* ## unique<br />
   将arr中重复元素过滤，返回唯一元素新数组，支持对象的判断
   <br />
   <br />
@@ -268,7 +268,7 @@
       unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
       // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
 
-* ## union(firstArr, secondArr)<br />
+* ## union<br />
   将firstArr和secondArr数组合并，并过滤重复的元素，返回一个新的数组。
   <br />
   <br />
@@ -288,7 +288,7 @@
       union([1, 3, 5],  [6, 8, 8, 6, 3])
       // => [1, 3, 5, 6, 8]
 
-* ## minus(firstArr, secondArr)<br />
+* ## minus<br />
   将firstArr与secondArr数组做差集，返回一个差集后的数组
   <br />
   <br />
@@ -308,7 +308,7 @@
       minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
       // => [1, 5]
 
-* ## intersection(firstArr, secondArr)<br />
+* ## intersection<br />
   将firstArr与secondArr数组做交集，返回一个交集后的数组
   <br />
   <br />
