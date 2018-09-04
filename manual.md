@@ -327,3 +327,51 @@
 
       intersection([1, 3, 5, 6], [8, 8, 6, 3])
       // => [3, 6]
+# Storage
+* ## setCookie<br />
+  往当前域(可设置)的cookie里写值
+  <br />
+  <br />
+  <b>Since</b>
+    1.1.0
+  <b>Arguments</b>
+        name:cookie的名称,string类型
+        value:cookie的值，string/object类型。若为对象会被转化为JSON
+       config:对该cookie的额外配置, object类型。可作如下配置:{
+            expires:7                       int类型, 指定该cookie过期的天数
+            domain:'www.domain.com',        string类型, 指定cookie的域，可以指定为子域
+            path:'/cookie/path',            string类型, 指定cookie的路径
+            secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
+       }
+
+  <b>Returns</b>
+        无
+  <b>Example</b>
+      setCookie('name','value');
+* ## getCookie<br />
+        读取cookie的值
+        <br />
+        <br />
+        <b>Since</b>
+              1.1.0
+        <b>Arguments</b>
+              name:cookie的名称,string类型
+              isObject:是否以对象的形式读取该cookie，返回的值会被转化成对象，若转化失败则返回null
+        <b>Returns</b>
+              返回该cookie的值
+        <b>Example</b>
+            getCookie('name')
+            //=>'value'
+* ## removeCookie<br />
+    删除cookie的值
+    <br />
+    <br />
+    <b>Since</b>
+        1.1.0
+    <b>Arguments</b>
+    name:cookie的名称,string类型
+    config:cookie的设置，必须与setCookie时的domain和path一致，该cookie才会被正确删除
+    <b>Returns</b>
+    无
+    <b>Example</b>
+    removeCookie('name')
