@@ -327,10 +327,10 @@
 
       intersection([1, 3, 5, 6], [8, 8, 6, 3])
       // => [3, 6]
+
 # Storage
 * ## setCookie<br />
   往当前域(可设置)的cookie里写值
-
 
   <b>Since</b>
   ```
@@ -346,10 +346,6 @@
         path:'/cookie/path',            string类型, 指定cookie的路径
         secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
     }
-  ```
-  <b>Returns</b>
-  ```
-  无
   ```
   <b>Example</b>
   ```
