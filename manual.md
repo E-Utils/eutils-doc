@@ -353,13 +353,13 @@
   <b>Arguments</b>
   ```
     name:cookie的名称,string类型
-      value:cookie的值，string/object类型。若为对象会被转化为JSON
-      config:对该cookie的额外配置, object类型。可作如下配置:{
-          expires:7                       int类型, 指定该cookie过期的天数
-          domain:'www.domain.com',        string类型, 指定cookie的域，可以指定为子域
-          path:'/cookie/path',            string类型, 指定cookie的路径
-          secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
-      }
+    value:cookie的值，string/object类型。若为对象会被转化为JSON
+    config:对该cookie的额外配置, object类型。可作如下配置:{
+        expires:7                       int类型, 指定该cookie过期的天数
+        domain:'www.domain.com',        string类型, 指定cookie的域，可以指定为子域
+        path:'/cookie/path',            string类型, 指定cookie的路径
+        secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
+    }
   ```
   <b>Example</b>
   ```
