@@ -222,111 +222,125 @@
   从fromIndex索引开始查找collection集合中是否存在value，惰性匹配，匹配到一个就不会匹配后面的，返回Boolean类型值
   注意：fromIndex不支持负数，出现问题后果自负
   <br />
-  <br />
   <b>Since</b>
-
-        1.1.0
+  ```
+    1.1.0
+  ```
   <b>Arguments</b>
-
-      collection： 集合|字符串|字面量对象,
-      value：要查找的值,
-      fromIndex：从指定索引开始查找
+  ```
+    collection： 集合|字符串|字面量对象,
+    value：要查找的值,
+    fromIndex：从指定索引开始查找
+  ```
 
   <b>Returns</b>
-
-      (boolean)：返回布尔值true|false
+  ```
+    (boolean)：返回布尔值true|false
+  ```
   <b>Example</b>
-
-      includes('abccdd', 'cc')
-      // => true
-      includes({cc: 222}, 'cc')
-      // => true
-      includes(true, 'cc')
-      // => false
-      includes([1, 3, [1,2], {1:3}], {1:3})
-      // => true
-      includes([1, 3, [1,2], {1:3}], {1:3}, 4)
-      // => false
+  ```
+    includes('abccdd', 'cc')
+    // => true
+    includes({cc: 222}, 'cc')
+    // => true
+    includes(true, 'cc')
+    // => false
+    includes([1, 3, [1,2], {1:3}], {1:3})
+    // => true
+    includes([1, 3, [1,2], {1:3}], {1:3}, 4)
+    // => false
+  ```
 
 * ## unique<br />
   将arr中重复元素过滤，返回唯一元素新数组，支持对象的判断
-  <br />
-  <br />
+
   <b>Since</b>
-
-        1.1.0
+  ```
+    1.1.0
+  ```
   <b>Arguments</b>
-
-      arr： 数组,
-      iterator：过滤器方法,
-
+  ```
+    arr： 数组,
+    iterator：过滤器方法,
+  ```
   <b>Returns</b>
-
-      (array)：返回不重复元素的数组
+  ```
+    (array)：返回不重复元素的数组
+  ```
   <b>Example</b>
-
-      unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
-      // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
+  ```
+    unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
+    // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
+  ```
 
 * ## union<br />
   将firstArr和secondArr数组合并，并过滤重复的元素，返回一个新的数组。
-  <br />
-  <br />
+
   <b>Since</b>
-
-        1.1.0
+  ```
+    1.1.0
+  ```
   <b>Arguments</b>
-
-      firstArr: 第一个数组
-      secondArr: 第二个数组
+  ```
+    firstArr: 第一个数组
+    secondArr: 第二个数组
+  ```
 
   <b>Returns</b>
-
-      (array)：返回一个新的数组
+  ```
+    (array)：返回一个新的数组
+  ```
   <b>Example</b>
-
-      union([1, 3, 5],  [6, 8, 8, 6, 3])
-      // => [1, 3, 5, 6, 8]
+  ```
+    union([1, 3, 5],  [6, 8, 8, 6, 3])
+    // => [1, 3, 5, 6, 8]
+  ```
 
 * ## minus<br />
   将firstArr与secondArr数组做差集，返回一个差集后的数组
-  <br />
-  <br />
+
   <b>Since</b>
-
-        1.1.0
+  ```
+    1.1.0
+  ```
   <b>Arguments</b>
-
-      firstArr: 第一个数组
-      secondArr: 第二个数组
+  ```
+    firstArr: 第一个数组
+    secondArr: 第二个数组
+  ```
 
   <b>Returns</b>
-
-      (array)：返回一个新的数组
+  ```
+    (array)：返回一个新的数组
+  ```
   <b>Example</b>
-
-      minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
-      // => [1, 5]
+  ```
+    minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
+    // => [1, 5]
+  ```
 
 * ## intersection<br />
   将firstArr与secondArr数组做交集，返回一个交集后的数组
   <br />
-  <br />
   <b>Since</b>
-
-        1.1.0
+  ```
+    1.1.0
+  ```
   <b>Arguments</b>
-
-      firstArr: 第一个数组
-      secondArr: 第二个数组
+  ```
+    firstArr: 第一个数组
+    secondArr: 第二个数组
+  ```
 
   <b>Returns</b>
-
-      (array)：返回一个新的数组
+  ```
+    (array)：返回一个新的数组
+  ```
   <b>Example</b>
-
-      intersection([1, 3, 5, 6], [8, 8, 6, 3])
-      // => [3, 6]
+  ```
+    intersection([1, 3, 5, 6], [8, 8, 6, 3])
+    // => [3, 6]
+  ```
 
 # Storage
 * ## setCookie<br />
@@ -334,65 +348,59 @@
 
   <b>Since</b>
   ```
-  1.1.0
+    1.1.0
   ```
   <b>Arguments</b>
   ```
-  name:cookie的名称,string类型
-    value:cookie的值，string/object类型。若为对象会被转化为JSON
-    config:对该cookie的额外配置, object类型。可作如下配置:{
-        expires:7                       int类型, 指定该cookie过期的天数
-        domain:'www.domain.com',        string类型, 指定cookie的域，可以指定为子域
-        path:'/cookie/path',            string类型, 指定cookie的路径
-        secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
-    }
+    name:cookie的名称,string类型
+      value:cookie的值，string/object类型。若为对象会被转化为JSON
+      config:对该cookie的额外配置, object类型。可作如下配置:{
+          expires:7                       int类型, 指定该cookie过期的天数
+          domain:'www.domain.com',        string类型, 指定cookie的域，可以指定为子域
+          path:'/cookie/path',            string类型, 指定cookie的路径
+          secure:true                     boolean类型,指定cookie是否只能在https协议下才可以读取
+      }
   ```
   <b>Example</b>
   ```
-  setCookie('name','value');
+    setCookie('name','value');
   ```
-
 
 * ## getCookie<br />
   读取cookie的值
 
   <b>Since</b>
   ```
-  1.1.0
+    1.1.0
   ```
   <b>Arguments</b>
   ```
-  name:cookie的名称,string类型
-  isObject:是否以对象的形式读取该cookie，返回的值会被转化成对象，若转化失败则返回null
+    name:cookie的名称,string类型
+    isObject:是否以对象的形式读取该cookie，返回的值会被转化成对象，若转化失败则返回null
   ```
   <b>Returns</b>
   ```
-  返回该cookie的值
+    返回该cookie的值
   ```
   <b>Example</b>
   ```
-  getCookie('name')
-  //=>'value'
+    getCookie('name')
+    //=>'value'
   ```
 
 * ## removeCookie<br />
   删除cookie的值
 
-
   <b>Since</b>
   ```
-  1.1.0
+    1.1.0
   ```
   <b>Arguments</b>
   ```
-  name:cookie的名称,string类型
-  config:cookie的设置，必须与setCookie时的domain和path一致，该cookie才会被正确删除
-  ```
-  <b>Returns</b>
-  ```
-  无
+    name:cookie的名称,string类型
+    config:cookie的设置，必须与setCookie时的domain和path一致，该cookie才会被正确删除
   ```
   <b>Example</b>
   ```
-  removeCookie('name')
+    removeCookie('name')
   ```
