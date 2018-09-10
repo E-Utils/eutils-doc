@@ -1,3 +1,5 @@
+## dateFormat
+
 ```
 函数名：dateFormat
 入参：date(number | date)、format(string: yyyy-MM-dd hh:mm:ss)
