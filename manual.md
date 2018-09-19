@@ -21,6 +21,23 @@
     // => '2018-07-15';
   ```
 
+* ## now</br>
+  获取当前时间的时间戳。
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Returns</b>
+  ```
+    (number): 返回当前时间的时间戳。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.now();
+    // => 1537347030735;
+  ```
+
 # Url
 * ## setUrlParam<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
@@ -89,7 +106,7 @@
   ```
   <b>Example</b>
   ```
-    replace('hello world', /o/, 'hi')
+    EUtils.replace('hello world', /o/, 'hi')
     // => 'hellhi world'
   ```
 
@@ -112,7 +129,7 @@
   ```
   <b>Example</b>
   ```
-    replaceAll('hello wOrld', /o/i, 'hi')
+    EUtils.replaceAll('hello wOrld', /o/i, 'hi')
     // => 'hellhi whirld'
   ```
 
@@ -133,7 +150,7 @@
   ```
   <b>Example</b>
   ```
-    toLower('hellO-wOrld')
+    EUtils.toLower('hellO-wOrld')
     // => 'hello-world'
   ```
 
@@ -154,7 +171,7 @@
   ```
   <b>Example</b>
   ```
-    toUpper('hello-world')
+    EUtils.toUpper('hello-world')
     // => 'HELLO-WORLD'
   ```
 
@@ -176,7 +193,7 @@
   ```
   <b>Example</b>
   ```
-    trim(' abbb ')
+    EUtils.trim(' abbb ')
     // => 'abbb'
   ```
 
@@ -193,7 +210,7 @@
   ```
   <b>Example</b>
   ```
-    generateUUID()
+    EUtils.generateUUID()
 
     // => 'af22-3fa8-4028-8dea-30a2'
   ```
@@ -210,10 +227,10 @@
   ```
   <b>Example</b>
   ```
-    indexOf([1, 2, 1, 2], 2)
+    EUtils.indexOf([1, 2, 1, 2], 2)
     // => 1
 
-    indexOf([1, 2, 1, 2], 2, 2)
+    EUtils.indexOf([1, 2, 1, 2], 2, 2)
     // => 3
   ```
 
@@ -239,15 +256,15 @@
   ```
   <b>Example</b>
   ```
-    includes('abccdd', 'cc')
+    EUtils.includes('abccdd', 'cc')
     // => true
-    includes({cc: 222}, 'cc')
+    EUtils.includes({cc: 222}, 'cc')
     // => true
-    includes(true, 'cc')
+    EUtils.includes(true, 'cc')
     // => false
-    includes([1, 3, [1,2], {1:3}], {1:3})
+    EUtils.includes([1, 3, [1,2], {1:3}], {1:3})
     // => true
-    includes([1, 3, [1,2], {1:3}], {1:3}, 4)
+    EUtils.includes([1, 3, [1,2], {1:3}], {1:3}, 4)
     // => false
   ```
 
@@ -269,7 +286,7 @@
   ```
   <b>Example</b>
   ```
-    unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
+    EUtils.unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
     // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
   ```
 
@@ -292,7 +309,7 @@
   ```
   <b>Example</b>
   ```
-    union([1, 3, 5],  [6, 8, 8, 6, 3])
+    EUtils.union([1, 3, 5],  [6, 8, 8, 6, 3])
     // => [1, 3, 5, 6, 8]
   ```
 
@@ -315,7 +332,7 @@
   ```
   <b>Example</b>
   ```
-    minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
+    EUtils.minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
     // => [1, 5]
   ```
 
@@ -338,8 +355,60 @@
   ```
   <b>Example</b>
   ```
-    intersection([1, 3, 5, 6], [8, 8, 6, 3])
+    EUtils.intersection([1, 3, 5, 6], [8, 8, 6, 3])
     // => [3, 6]
+  ```
+
+* ## max<br />
+  计算数组中的最大值
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    array: 数字或字母的数组
+  ```
+  <b>Returns</b>
+  ```
+    (Number ｜ String)：返回数组中的最大值
+  ```
+  <b>Example</b>
+  ```
+    EUtils.max([1, 3, 5, 6])
+
+    // => 6
+
+    EUtils.max(['a', 'b', 'c'])
+    
+    // => c
+  ```
+
+* ## min<br />
+  计算数组中的最小值
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    array: 数字或字母的数组
+  ```
+  <b>Returns</b>
+  ```
+    (Number ｜ String)：返回数组中的最小值
+  ```
+  <b>Example</b>
+  ```
+    EUtils.min([1, 3, 5, 6])
+
+    // => 1
+
+    EUtils.max(['a', 'b', 'c'])
+    
+    // => a
   ```
 
 # Storage
