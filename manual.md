@@ -28,6 +28,33 @@
   ```
     1.2.0
   ```
+  <b>Arguments</b>
+  ```
+    date(number | Date | String): 传入的日期。
+  ```
+  <b>Returns</b>
+  ```
+    (number): 返回转换后的时间戳。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.toTimestamp(new Date());
+    // => 1536659540425;
+
+    EUtils.toTimestamp('2018-09-09');
+    // => 1536451200000;
+
+    EUtils.toTimestamp(1536422400000);
+    // => 1536422400000
+  ```
+
+* ## toTimestamp</br>
+  将日期时间转换成时间戳
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
   <b>Returns</b>
   ```
     (number): 返回当前时间的时间戳。
