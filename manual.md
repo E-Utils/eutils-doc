@@ -411,6 +411,32 @@
     // => a
   ```
 
+* ## sum<br />
+  计算数组中值的和
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    array: 数字或字母的数组
+  ```
+  <b>Returns</b>
+  ```
+    (Number ｜ String)：返回数组中的和
+  ```
+  <b>Example</b>
+  ```
+    EUtils.sum([1, 3, 5, 6])
+
+    // => 15
+
+    EUtils.sum(['a', 'b', 'c'])
+    
+    // => 'abc'
+  ```
+
 # Storage
 * ## setCookie<br />
   往当前域(可设置)的cookie里写值
