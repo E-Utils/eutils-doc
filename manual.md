@@ -28,9 +28,26 @@
   ```
     1.2.0
   ```
+  <b>Returns</b>
+  ```
+    (number): 返回当前时间的时间戳。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.now();
+    // => 1537347030735;
+  ```
+
+* ## toTimestamp</br>
+  将日期时间转换成时间戳
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
   <b>Arguments</b>
   ```
-    date(number | Date | String): 传入的日期。
+    date(Number | Date | String): 传入的预转换的日期。
   ```
   <b>Returns</b>
   ```
@@ -46,23 +63,6 @@
 
     EUtils.toTimestamp(1536422400000);
     // => 1536422400000
-  ```
-
-* ## toTimestamp</br>
-  将日期时间转换成时间戳
-
-  <b>Since</b>
-  ```
-    1.2.0
-  ```
-  <b>Returns</b>
-  ```
-    (number): 返回当前时间的时间戳。
-  ```
-  <b>Example</b>
-  ```
-    EUtils.now();
-    // => 1537347030735;
   ```
 
 # Url
