@@ -214,6 +214,8 @@
 
     // => 'af22-3fa8-4028-8dea-30a2'
   ```
+
+# Array
 * ## indexOf<br />
   数组中查找指定字符
 
@@ -234,7 +236,6 @@
     // => 3
   ```
 
-# Array
 * ## includes<br />
   从fromIndex索引开始查找collection集合中是否存在value，惰性匹配，匹配到一个就不会匹配后面的，返回Boolean类型值
   注意：fromIndex不支持负数，出现问题后果自负
