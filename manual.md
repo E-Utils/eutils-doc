@@ -527,3 +527,36 @@
   ```
     removeCookie('name')
   ```
+# Other
+* ##has
+  判断对象是否存在路径指定的属性
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    object:对象
+    path:路径
+  ```
+  <b>example</b>
+  ```
+    has({a:{b:1}},'a.b');
+  ```
+
+* ##isEmpty
+  判断给定的值是否为空（null/undefined/''/0/[]/{}/空迭代器对象）
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    target:任意值
+  ```
+  <b>example</b>
+  ```
+    isEmpty([]);
+  ```
