@@ -528,7 +528,7 @@
     removeCookie('name')
   ```
 # Other
-* ##has
+* ## has
   判断对象是否存在路径指定的属性
   
   <b>Since</b>
@@ -545,7 +545,7 @@
     has({a:{b:1}},'a.b');
   ```
 
-* ##isEmpty
+* ## isEmpty
   判断给定的值是否为空（null/undefined/''/0/[]/{}/空迭代器对象）
   
   <b>Since</b>
