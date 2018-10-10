@@ -604,6 +604,8 @@
     //=> false 
   ```
 
+## DOM
+
 * ## isElement
   判断给定的值是否为dom元素
   
@@ -623,3 +625,53 @@
      isElement(document.crateElement('div'));
     //=> true
   ```
+
+* ## position
+  元素距离页面顶端的距离
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    elem：DOM元素对象
+    type：距离页面的距离，默认值'' => {left: ..., top: ...}
+  ```
+  <b>example</b>
+  ```
+    position(document.getElementById('domJS')))
+    //=> {top: 20, left: 200}
+
+    position(document.getElementById('domJS')), 'left')
+    //=> 200
+
+    position(document.getElementById('domJS')), 'top')
+    //=> 20
+  ```
+
+* ## scrollTop
+    元素的滚动条位置
+
+    <b>Since</b>
+    ```
+      1.2.0
+    ```
+    <b>Arguments</b>
+    ```
+      elem：DOM元素对象
+      target：移动到目标位置
+    ```
+    <b>example</b>
+    ```javascript
+      EUtils.scrollTop(window)
+      //=> 20
+
+      EUtils.scrollTop(document)
+      //=> 20
+
+      document.getElementById('domJS').onscroll = function(){
+        console.log('domJS -> scrollTop: ', EUtils.scrollTop(this));
+      };
+      //=> domJS -> scrollTop: 20
+    ```
