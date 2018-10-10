@@ -242,6 +242,31 @@
     // => 'af22-3fa8-4028-8dea-30a2'
   ```
 
+* ## getStylePrefix<br />
+  获取指定值的浏览器前缀
+  
+  <b>Arguments</b>
+  ```
+  propertyKey(string): 需要获取前缀的样式值，如transform
+  isConcat(boolean): 是否需要返回拼接后的字符串，默认为true，如只需要前缀则传false
+  ```
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Returns</b>
+  ```
+    (string)：默认返回样式前缀+该样式本身
+  ```
+  <b>Example</b>
+  ```
+    EUtils.getStylePrefix('transform')
+    // => '-ms-transform'
+
+    EUtils.getStylePrefix('transform', false)
+    // => '-ms-'
+  ```
+
 # Array
 * ## indexOf<br />
   数组中查找指定字符
@@ -559,4 +584,42 @@
   <b>example</b>
   ```
     isEmpty([]);
+  ```
+
+* ## isEqual
+  判断给定的两个值值是否相等
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    value:任意值
+    other:任意值
+  ```
+  <b>example</b>
+  ```
+    isEqual(1, '1');
+    //=> false 
+  ```
+
+* ## isElement
+  判断给定的值是否为dom元素
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    element
+  ```
+  <b>example</b>
+  ```
+    isElement(1);
+    //=> false 
+
+     isElement(document.crateElement('div'));
+    //=> true
   ```
