@@ -552,6 +552,7 @@
   ```
     removeCookie('name')
   ```
+
 # Other
 * ## has
   判断对象是否存在路径指定的属性
@@ -604,8 +605,7 @@
     //=> false 
   ```
 
-## DOM
-
+# DOM
 * ## isElement
   判断给定的值是否为dom元素
   
