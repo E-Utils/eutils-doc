@@ -64,7 +64,32 @@
     EUtils.toTimestamp(1536422400000);
     // => 1536422400000
   ```
+* ## isDate</br>
+  判断所给参数是否为Date类型
 
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    isDate(Number | Date | String): 传入需要判断的值。
+  ```
+  <b>Returns</b>
+  ```
+    (boolean): 返回是否为Date。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.isDate(new Date());
+    // => true
+
+    EUtils.isDate('2018-09-09');
+    // => false
+
+    EUtils.isDate(null);
+    // => false
+  ```
 # Url
 * ## setUrlParam<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
@@ -675,3 +700,27 @@
       };
       //=> domJS -> scrollTop: 20
     ```
+# Object
+* ## keys</br>
+  获取object所有键值
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    obj(Object): 需要获取所有key的对象。
+  ```
+  <b>Returns</b>
+  ```
+    (array): 返回所有键值的数组。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.keys({one: '1', two: 'two'});
+    // => ['one', 'two']
+    
+    EUtils.keys({one: '1', two: 'two'});
+    // => ['one', 'two']
+    
