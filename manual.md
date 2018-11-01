@@ -515,6 +515,55 @@
     // => 'abc'
   ```
 
+* ## isArray<br />
+  判断入参是否为数组
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Returns</b>
+  ```
+    (boolean)：true|false
+  ```
+  <b>Arguments</b>
+  ```
+    obj: Array类型
+  ```
+  EUtils.isArray([1, 2, 3]);
+  // => true
+  EUtils.isArray(document.body.children);
+  // => false
+  EUtils.isArray('abc');
+  // => false
+  ```  
+
+* ## rest<br />
+  返回剩余数组元素集合
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Returns</b>
+  ```
+    (Array)：[]
+  ```
+  <b>Arguments</b>
+  ```
+    sourceArr: Array类型
+    index: 索引位置，默认0
+  ```
+  reset([1, 2, 3]);
+  // => [2,3]
+  reset([]);
+  // => []
+  reset([1, 2, 3], 2);
+  // => [3]
+  reset([1, 2, 3], -2);
+  // => [2,3]
+  ``` 
+
 # Storage
 * ## setCookie<br />
   往当前域(可设置)的cookie里写值
@@ -723,4 +772,33 @@
     
     EUtils.keys({one: '1', two: 'two'});
     // => ['one', 'two']
+
+* ## isObject</br>
+  检测入参是否为对象
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    obj(Object): 需要检测的参数。
+  ```
+  <b>Returns</b>
+  ```
+    (boolean): 返回true|false。
+  ```
+  <b>Example</b>
+  ```
+  EUtils.isObject({});
+  // => true
+  EUtils.isObject(document.body.children);
+  // => true
+  EUtils.isObject([]);
+  // => true
+  EUtils.isObject(null);
+  // => false
+  EUtils.isObject(Object.toString);
+  // => false
+  ```
     
