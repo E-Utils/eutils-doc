@@ -560,3 +560,87 @@
   ```
     isEmpty([]);
   ```
+* ## get
+  获取对象指定路径的属性（路径用.分隔）
+  
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    object:对象
+    path:路径
+    defaultValue:属性不存在时返回的默认值
+  ```
+  <b>example</b>
+  ```
+    get({a:{b:1}},'a.b');
+    // => 1
+  ```
+* ## clone
+  浅拷贝一个对象
+  
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    object:要拷贝的对象
+  ```
+  <b>example</b>
+  ```
+    clone({a:{b:1}});
+    // => {a:{b:1}}
+  ```
+* ## debounce
+  函数去抖
+  
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    func:要去抖的函数
+    wait:毫秒数
+  ```
+  <b>description</b>
+  ```
+    函数去抖即在调用函数时先等待一段时间（比如1秒钟），若在1秒内没有对该函数再一次调用则执行函数；
+    反之，则需要重新计时1秒。日常生活中，坐电梯就是一个很好去抖的例子。函数去抖可以规避在短时间内
+    对某个函数的大量执行，经常用在scroll等DOM事件中。
+  ```
+  <b>example</b>
+  ```
+    //generate the debounce function
+    let debounced = debounce(()=>{console.log(123)}, 500);
+    //cancel the debounce function
+    debounced.cancel();
+  ```
+* ## throttle
+  函数节流
+  
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>description</b>
+  ```
+    函数节流与函数去抖类似。区别在于，如果在等待时间内一直有调用，函数去抖会一直等待下去；
+    而函数节流则会在等待指定的时间满时强制执行一次函数，从而保证在每个等待时间里至少执行一次函数。
+    
+  ```
+  <b>Arguments</b>
+  ```
+    func:要节流的函数
+    wait:毫秒数
+  ```
+  <b>example</b>
+  ```
+    //generate the throttle function
+    let throttled = throttle(()=>{console.log(123)}, 500);
+    //cancel the throttle function
+    throttled.cancel();
+  ```
