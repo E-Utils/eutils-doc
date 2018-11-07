@@ -64,7 +64,32 @@
     EUtils.toTimestamp(1536422400000);
     // => 1536422400000
   ```
+* ## isDate</br>
+  判断所给参数是否为Date类型
 
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    isDate(Number | Date | String): 传入需要判断的值。
+  ```
+  <b>Returns</b>
+  ```
+    (boolean): 返回是否为Date。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.isDate(new Date());
+    // => true
+
+    EUtils.isDate('2018-09-09');
+    // => false
+
+    EUtils.isDate(null);
+    // => false
+  ```
 # Url
 * ## setUrlParam<br />
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
@@ -240,6 +265,31 @@
     EUtils.generateUUID()
 
     // => 'af22-3fa8-4028-8dea-30a2'
+  ```
+
+* ## getStylePrefix<br />
+  获取指定值的浏览器前缀
+  
+  <b>Arguments</b>
+  ```
+  propertyKey(string): 需要获取前缀的样式值，如transform
+  isConcat(boolean): 是否需要返回拼接后的字符串，默认为true，如只需要前缀则传false
+  ```
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Returns</b>
+  ```
+    (string)：默认返回样式前缀+该样式本身
+  ```
+  <b>Example</b>
+  ```
+    EUtils.getStylePrefix('transform')
+    // => '-ms-transform'
+
+    EUtils.getStylePrefix('transform', false)
+    // => '-ms-'
   ```
 
 # Array
@@ -465,6 +515,55 @@
     // => 'abc'
   ```
 
+* ## isArray<br />
+  判断入参是否为数组
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Returns</b>
+  ```
+    (boolean)：true|false
+  ```
+  <b>Arguments</b>
+  ```
+    obj: Array类型
+  ```
+  EUtils.isArray([1, 2, 3]);
+  // => true
+  EUtils.isArray(document.body.children);
+  // => false
+  EUtils.isArray('abc');
+  // => false
+  ```  
+
+* ## rest<br />
+  返回剩余数组元素集合
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Returns</b>
+  ```
+    (Array)：[]
+  ```
+  <b>Arguments</b>
+  ```
+    sourceArr: Array类型
+    index: 索引位置，默认0
+  ```
+  reset([1, 2, 3]);
+  // => [2,3]
+  reset([]);
+  // => []
+  reset([1, 2, 3], 2);
+  // => [3]
+  reset([1, 2, 3], -2);
+  // => [2,3]
+  ``` 
+
 # Storage
 * ## setCookie<br />
   往当前域(可设置)的cookie里写值
@@ -527,6 +626,7 @@
   ```
     removeCookie('name')
   ```
+
 # Other
 * ## has
   判断对象是否存在路径指定的属性
@@ -560,6 +660,148 @@
   ```
     isEmpty([]);
   ```
+
+* ## isEqual
+  判断给定的两个值值是否相等
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    value:任意值
+    other:任意值
+  ```
+  <b>example</b>
+  ```
+    isEqual(1, '1');
+    //=> false 
+  ```
+
+# DOM
+* ## isElement
+  判断给定的值是否为dom元素
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    element
+  ```
+  <b>example</b>
+  ```
+    isElement(1);
+    //=> false 
+
+     isElement(document.crateElement('div'));
+    //=> true
+  ```
+
+* ## position
+  元素距离页面顶端的距离
+
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    elem：DOM元素对象
+    type：距离页面的距离，默认值'' => {left: ..., top: ...}
+  ```
+  <b>example</b>
+  ```
+    position(document.getElementById('domJS')))
+    //=> {top: 20, left: 200}
+
+    position(document.getElementById('domJS')), 'left')
+    //=> 200
+
+    position(document.getElementById('domJS')), 'top')
+    //=> 20
+  ```
+
+* ## scrollTop
+    元素的滚动条位置
+
+    <b>Since</b>
+    ```
+      1.2.0
+    ```
+    <b>Arguments</b>
+    ```
+      elem：DOM元素对象
+      target：移动到目标位置
+    ```
+    <b>example</b>
+    ```javascript
+      EUtils.scrollTop(window)
+      //=> 20
+
+      EUtils.scrollTop(document)
+      //=> 20
+
+      document.getElementById('domJS').onscroll = function(){
+        console.log('domJS -> scrollTop: ', EUtils.scrollTop(this));
+      };
+      //=> domJS -> scrollTop: 20
+    ```
+# Object
+* ## keys</br>
+  获取object所有键值
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    obj(Object): 需要获取所有key的对象。
+  ```
+  <b>Returns</b>
+  ```
+    (array): 返回所有键值的数组。
+  ```
+  <b>Example</b>
+  ```
+    EUtils.keys({one: '1', two: 'two'});
+    // => ['one', 'two']
+    
+    EUtils.keys({one: '1', two: 'two'});
+    // => ['one', 'two']
+
+* ## isObject</br>
+  检测入参是否为对象
+
+  <b>Since</b>
+  ```
+    1.3.0
+  ```
+  <b>Arguments</b>
+  ```
+    obj(Object): 需要检测的参数。
+  ```
+  <b>Returns</b>
+  ```
+    (boolean): 返回true|false。
+  ```
+  <b>Example</b>
+  ```
+  EUtils.isObject({});
+  // => true
+  EUtils.isObject(document.body.children);
+  // => true
+  EUtils.isObject([]);
+  // => true
+  EUtils.isObject(null);
+  // => false
+  EUtils.isObject(Object.toString);
+  // => false
+  ```
+    
 * ## get
   获取对象指定路径的属性（路径用.分隔）
   
