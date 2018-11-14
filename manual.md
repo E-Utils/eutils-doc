@@ -1,5 +1,6 @@
 # Date
-* ## dateFormat</br>
+* ## dateFormat
+
   将日期按照指定格式格式化并返回格式化后的日期。
 
   <b>Since</b>
@@ -16,12 +17,13 @@
     (string): 返回格式化后的日期。
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.dateFormat(1531643785284, 'yyyy-MM-dd');
     // => '2018-07-15';
   ```
 
-* ## now</br>
+* ## now
+  
   获取当前时间的时间戳。
 
   <b>Since</b>
@@ -33,12 +35,13 @@
     (number): 返回当前时间的时间戳。
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.now();
     // => 1537347030735;
   ```
 
-* ## toTimestamp</br>
+* ## toTimestamp
+  
   将日期时间转换成时间戳
 
   <b>Since</b>
@@ -54,7 +57,7 @@
     (number): 返回转换后的时间戳。
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.toTimestamp(new Date());
     // => 1536659540425;
 
