@@ -67,6 +67,7 @@
     EUtils.toTimestamp(1536422400000);
     // => 1536422400000
   ```
+
 * ## isDate
 
   判断所给参数是否为Date类型
@@ -94,6 +95,7 @@
     EUtils.isDate(null);
     // => false
   ```
+
 # Url
 * ## setUrlParam
 
