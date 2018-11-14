@@ -663,63 +663,6 @@
     removeCookie('name')
   ```
 
-# Other
-* ## has
-
-  判断对象是否存在路径指定的属性
-  
-  <b>Since</b>
-  ```
-    1.2.0
-  ```
-  <b>Arguments</b>
-  ```
-    object:对象
-    path:路径
-  ```
-  <b>example</b>
-  ```js
-    EUtils.has({a:{b:1}},'a.b');
-    // => true
-  ```
-
-* ## isEmpty
-
-  判断给定的值是否为空（null/undefined/''/0/[]/{}/空迭代器对象）
-  
-  <b>Since</b>
-  ```
-    1.2.0
-  ```
-  <b>Arguments</b>
-  ```
-    target:任意值
-  ```
-  <b>example</b>
-  ```js
-    EUtils.isEmpty([]);
-    // => true
-  ```
-
-* ## isEqual
-
-  判断给定的两个值值是否相等
-  
-  <b>Since</b>
-  ```
-    1.2.0
-  ```
-  <b>Arguments</b>
-  ```
-    value:任意值
-    other:任意值
-  ```
-  <b>example</b>
-  ```js
-    EUtils.isEqual(1, '1');
-    //=> false 
-  ```
-
 # DOM
 * ## isElement
 
@@ -944,4 +887,61 @@
     //cancel the throttle function
   
     EUtils.throttled.cancel();
+  ```
+
+# Others
+* ## has
+
+  判断对象是否存在路径指定的属性
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    object:对象
+    path:路径
+  ```
+  <b>example</b>
+  ```js
+    EUtils.has({a:{b:1}},'a.b');
+    // => true
+  ```
+
+* ## isEmpty
+
+  判断给定的值是否为空（null/undefined/''/0/[]/{}/空迭代器对象）
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    target:任意值
+  ```
+  <b>example</b>
+  ```js
+    EUtils.isEmpty([]);
+    // => true
+  ```
+
+* ## isEqual
+
+  判断给定的两个值值是否相等
+  
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    value:任意值
+    other:任意值
+  ```
+  <b>example</b>
+  ```js
+    EUtils.isEqual(1, '1');
+    //=> false 
   ```
