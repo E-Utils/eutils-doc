@@ -67,7 +67,8 @@
     EUtils.toTimestamp(1536422400000);
     // => 1536422400000
   ```
-* ## isDate</br>
+* ## isDate
+
   判断所给参数是否为Date类型
 
   <b>Since</b>
@@ -83,7 +84,7 @@
     (boolean): 返回是否为Date。
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.isDate(new Date());
     // => true
 
@@ -94,7 +95,8 @@
     // => false
   ```
 # Url
-* ## setUrlParam<br />
+* ## setUrlParam
+
   向当前Url或目标Url添加参数，originUrl不传则默认使用当前Url
 
   <b>Since</b>
@@ -111,7 +113,7 @@
     (string)：返回拼接好后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.setUrlParam({
         id: 2,
         name: 3
@@ -119,7 +121,8 @@
     // => http://www.ewt360.com?id=2&name=3
   ```
       
-* ## getUrlParam<br />
+* ## getUrlParam
+
   从当前Url或目标Url获取参数，originUrl不传则默认使用当前Url
 
   <b>Since</b>
@@ -136,13 +139,14 @@
     (string)：返回查找到的参数值value,如果未找到则返回空字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.getUrlParam('id', 'http://www.ewt360.com?id=1');
     // => 1
   ```
 
 # String
-* ## repalce<br />
+* ## repalce
+
   将str字符串中指定的pattern字符替换成replacement字符，惰性匹配，匹配到一个就不会匹配后面的
 
   <b>Since</b>
@@ -160,12 +164,14 @@
     (string)：返回替换后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.replace('hello world', /o/, 'hi')
+
     // => 'hellhi world'
   ```
 
-* ## repalceAll<br />
+* ## repalceAll
+
   将str字符串中指定的sourcement字符全都替换成replacement字符
 
   <b>Since</b>
@@ -183,12 +189,14 @@
     (string)：返回替换后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.replaceAll('hello wOrld', /o/i, 'hi')
+
     // => 'hellhi whirld'
   ```
 
-* ## toLower<br />
+* ## toLower
+
   将str字符串大写全部转成小写
 
   <b>Since</b>
@@ -204,12 +212,14 @@
     (string)：返回小写后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.toLower('hellO-wOrld')
+
     // => 'hello-world'
   ```
 
-* ## toUpper<br />
+* ## toUpper
+
   将str字符串小写全部转成大写
 
   <b>Since</b>
@@ -225,12 +235,14 @@
     (string)：返回大写后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.toUpper('hello-world')
+
     // => 'HELLO-WORLD'
   ```
 
-* ## trim<br />
+* ## trim
+
   将str字符串前后空格
 
   <b>Since</b>
@@ -247,12 +259,13 @@
     (string)：返回去除后的字符串
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.trim(' abbb ')
     // => 'abbb'
   ```
 
-* ## generateUUID<br />
+* ## generateUUID
+
   生成唯一的通用标识符（UUID），可用于生成react的列表渲染时所需的key
 
   <b>Since</b>
@@ -264,13 +277,14 @@
     (string)：返回唯一的UUID
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.generateUUID()
 
     // => 'af22-3fa8-4028-8dea-30a2'
   ```
 
-* ## getStylePrefix<br />
+* ## getStylePrefix
+
   获取指定值的浏览器前缀
   
   <b>Arguments</b>
@@ -287,7 +301,7 @@
     (string)：默认返回样式前缀+该样式本身
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.getStylePrefix('transform')
     // => '-ms-transform'
 
@@ -296,7 +310,8 @@
   ```
 
 # Array
-* ## indexOf<br />
+* ## indexOf
+
   数组中查找指定字符
 
   <b>Since</b>
@@ -316,10 +331,11 @@
     // => 3
   ```
 
-* ## includes<br />
+* ## includes
+
   从fromIndex索引开始查找collection集合中是否存在value，惰性匹配，匹配到一个就不会匹配后面的，返回Boolean类型值
   注意：fromIndex不支持负数，出现问题后果自负
-  <br />
+
   <b>Since</b>
   ```
     1.1.0
@@ -330,26 +346,30 @@
     value：要查找的值,
     fromIndex：从指定索引开始查找
   ```
-
   <b>Returns</b>
   ```
     (boolean)：返回布尔值true|false
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.includes('abccdd', 'cc')
     // => true
+
     EUtils.includes({cc: 222}, 'cc')
     // => true
+
     EUtils.includes(true, 'cc')
     // => false
+
     EUtils.includes([1, 3, [1,2], {1:3}], {1:3})
     // => true
+
     EUtils.includes([1, 3, [1,2], {1:3}], {1:3}, 4)
     // => false
   ```
 
-* ## unique<br />
+* ## unique
+
   将arr中重复元素过滤，返回唯一元素新数组，支持对象的判断
 
   <b>Since</b>
@@ -366,12 +386,13 @@
     (array)：返回不重复元素的数组
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.unique([1, 3, 5, 6, 8, 8, 6, 3, [1,2], [1,2], {item: 1, 2: 3}, {item: 1, 2: 3}])
     // => [1, 3, 5, 6, 8, [1,2], {item: 1, 2: 3}]
   ```
 
-* ## union<br />
+* ## union
+
   将firstArr和secondArr数组合并，并过滤重复的元素，返回一个新的数组。
 
   <b>Since</b>
@@ -383,18 +404,18 @@
     firstArr: 第一个数组
     secondArr: 第二个数组
   ```
-
   <b>Returns</b>
   ```
     (array)：返回一个新的数组
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.union([1, 3, 5],  [6, 8, 8, 6, 3])
     // => [1, 3, 5, 6, 8]
   ```
 
-* ## minus<br />
+* ## minus
+
   将firstArr与secondArr数组做差集，返回一个差集后的数组
 
   <b>Since</b>
@@ -406,20 +427,20 @@
     firstArr: 第一个数组
     secondArr: 第二个数组
   ```
-
   <b>Returns</b>
   ```
     (array)：返回一个新的数组
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.minus([1, 3, 5, 6], [8, 8, 6, 3, 2])
     // => [1, 5]
   ```
 
-* ## intersection<br />
+* ## intersection
+
   将firstArr与secondArr数组做交集，返回一个交集后的数组
-  <br />
+
   <b>Since</b>
   ```
     1.1.0
@@ -429,18 +450,18 @@
     firstArr: 第一个数组
     secondArr: 第二个数组
   ```
-
   <b>Returns</b>
   ```
     (array)：返回一个新的数组
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.intersection([1, 3, 5, 6], [8, 8, 6, 3])
     // => [3, 6]
   ```
 
-* ## max<br />
+* ## max
+
   计算数组中的最大值
 
   <b>Since</b>
@@ -456,17 +477,16 @@
     (Number ｜ String)：返回数组中的最大值
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.max([1, 3, 5, 6])
-
     // => 6
 
     EUtils.max(['a', 'b', 'c'])
-    
     // => c
   ```
 
-* ## min<br />
+* ## min
+
   计算数组中的最小值
 
   <b>Since</b>
@@ -482,17 +502,16 @@
     (Number ｜ String)：返回数组中的最小值
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.min([1, 3, 5, 6])
-
     // => 1
 
     EUtils.max(['a', 'b', 'c'])
-    
     // => a
   ```
 
-* ## sum<br />
+* ## sum
+
   计算数组中值的和
 
   <b>Since</b>
@@ -508,17 +527,16 @@
     (Number ｜ String)：返回数组中的和
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.sum([1, 3, 5, 6])
-
     // => 15
 
-    EUtils.sum(['a', 'b', 'c'])
-    
+    EUtils.sum(['a', 'b', 'c']) 
     // => 'abc'
   ```
 
-* ## isArray<br />
+* ## isArray
+
   判断入参是否为数组
 
   <b>Since</b>
@@ -533,15 +551,20 @@
   ```
     obj: Array类型
   ```
-  EUtils.isArray([1, 2, 3]);
-  // => true
-  EUtils.isArray(document.body.children);
-  // => false
-  EUtils.isArray('abc');
-  // => false
+  <b>Example</b>
+  ```js
+    EUtils.isArray([1, 2, 3]);
+    // => true
+
+    EUtils.isArray(document.body.children);
+    // => false
+
+    EUtils.isArray('abc');
+    // => false
   ```  
 
-* ## rest<br />
+* ## rest
+
   返回剩余数组元素集合
 
   <b>Since</b>
@@ -557,18 +580,24 @@
     sourceArr: Array类型
     index: 索引位置，默认0
   ```
-  reset([1, 2, 3]);
-  // => [2,3]
-  reset([]);
-  // => []
-  reset([1, 2, 3], 2);
-  // => [3]
-  reset([1, 2, 3], -2);
-  // => [2,3]
+  <b>Example</b>
+  ```js
+    EUtils.rest([1, 2, 3]);
+    // => [2,3]
+
+    EUtils.rest([]);
+    // => []
+
+    EUtils.rest([1, 2, 3], 2);
+    // => [3]
+
+    EUtils.rest([1, 2, 3], -2);
+    // => [2,3]
   ``` 
 
 # Storage
-* ## setCookie<br />
+* ## setCookie
+
   往当前域(可设置)的cookie里写值
 
   <b>Since</b>
@@ -587,11 +616,12 @@
     }
   ```
   <b>Example</b>
-  ```
+  ```js
     setCookie('name','value');
   ```
 
-* ## getCookie<br />
+* ## getCookie
+
   读取cookie的值
 
   <b>Since</b>
@@ -608,12 +638,13 @@
     返回该cookie的值
   ```
   <b>Example</b>
-  ```
+  ```js
     getCookie('name')
     //=>'value'
   ```
 
-* ## removeCookie<br />
+* ## removeCookie
+
   删除cookie的值
 
   <b>Since</b>
@@ -626,12 +657,13 @@
     config:cookie的设置，必须与setCookie时的domain和path一致，该cookie才会被正确删除
   ```
   <b>Example</b>
-  ```
+  ```js
     removeCookie('name')
   ```
 
 # Other
 * ## has
+
   判断对象是否存在路径指定的属性
   
   <b>Since</b>
@@ -644,11 +676,13 @@
     path:路径
   ```
   <b>example</b>
-  ```
-    has({a:{b:1}},'a.b');
+  ```js
+    EUtils.has({a:{b:1}},'a.b');
+    // => true
   ```
 
 * ## isEmpty
+
   判断给定的值是否为空（null/undefined/''/0/[]/{}/空迭代器对象）
   
   <b>Since</b>
@@ -660,11 +694,13 @@
     target:任意值
   ```
   <b>example</b>
-  ```
-    isEmpty([]);
+  ```js
+    EUtils.isEmpty([]);
+    // => true
   ```
 
 * ## isEqual
+
   判断给定的两个值值是否相等
   
   <b>Since</b>
@@ -677,13 +713,14 @@
     other:任意值
   ```
   <b>example</b>
-  ```
-    isEqual(1, '1');
+  ```js
+    EUtils.isEqual(1, '1');
     //=> false 
   ```
 
 # DOM
 * ## isElement
+
   判断给定的值是否为dom元素
   
   <b>Since</b>
@@ -695,15 +732,16 @@
     element
   ```
   <b>example</b>
-  ```
-    isElement(1);
+  ```js
+    EUtils.isElement(1);
     //=> false 
 
-     isElement(document.crateElement('div'));
+    EUtils.isElement(document.crateElement('div'));
     //=> true
   ```
 
 * ## position
+
   元素距离页面顶端的距离
 
   <b>Since</b>
@@ -716,44 +754,47 @@
     type：距离页面的距离，默认值'' => {left: ..., top: ...}
   ```
   <b>example</b>
-  ```
-    position(document.getElementById('domJS')))
+  ```js
+    EUtils.position(document.getElementById('domJS')))
     //=> {top: 20, left: 200}
 
-    position(document.getElementById('domJS')), 'left')
+    EUtils.position(document.getElementById('domJS')), 'left')
     //=> 200
 
-    position(document.getElementById('domJS')), 'top')
+    EUtils.position(document.getElementById('domJS')), 'top')
     //=> 20
   ```
 
 * ## scrollTop
-    元素的滚动条位置
 
-    <b>Since</b>
-    ```
-      1.2.0
-    ```
-    <b>Arguments</b>
-    ```
-      elem：DOM元素对象
-      target：移动到目标位置
-    ```
-    <b>example</b>
-    ```javascript
-      EUtils.scrollTop(window)
-      //=> 20
+  元素的滚动条位置
 
-      EUtils.scrollTop(document)
-      //=> 20
+  <b>Since</b>
+  ```
+    1.2.0
+  ```
+  <b>Arguments</b>
+  ```
+    elem：DOM元素对象
+    target：移动到目标位置
+  ```
+  <b>example</b>
+  ```js
+    EUtils.scrollTop(window)
+    //=> 20
 
-      document.getElementById('domJS').onscroll = function(){
-        console.log('domJS -> scrollTop: ', EUtils.scrollTop(this));
-      };
-      //=> domJS -> scrollTop: 20
-    ```
+    EUtils.scrollTop(document)
+    //=> 20
+
+    document.getElementById('domJS').onscroll = function(){
+      console.log('domJS -> scrollTop: ', EUtils.scrollTop(this));
+    };
+    //=> domJS -> scrollTop: 20
+  ```
+
 # Object
-* ## keys</br>
+* ## keys
+
   获取object所有键值
 
   <b>Since</b>
@@ -769,14 +810,16 @@
     (array): 返回所有键值的数组。
   ```
   <b>Example</b>
-  ```
+  ```js
     EUtils.keys({one: '1', two: 'two'});
     // => ['one', 'two']
     
     EUtils.keys({one: '1', two: 'two'});
     // => ['one', 'two']
+  ```
 
-* ## isObject</br>
+* ## isObject
+
   检测入参是否为对象
 
   <b>Since</b>
@@ -792,20 +835,25 @@
     (boolean): 返回true|false。
   ```
   <b>Example</b>
-  ```
-  EUtils.isObject({});
-  // => true
-  EUtils.isObject(document.body.children);
-  // => true
-  EUtils.isObject([]);
-  // => true
-  EUtils.isObject(null);
-  // => false
-  EUtils.isObject(Object.toString);
-  // => false
+  ```js
+    EUtils.isObject({});
+    // => true
+
+    EUtils.isObject(document.body.children);
+    // => true
+
+    EUtils.isObject([]);
+    // => true
+
+    EUtils.isObject(null);
+    // => false
+
+    EUtils.isObject(Object.toString);
+    // => false
   ```
     
 * ## get
+
   获取对象指定路径的属性（路径用.分隔）
   
   <b>Since</b>
@@ -819,11 +867,13 @@
     defaultValue:属性不存在时返回的默认值
   ```
   <b>example</b>
-  ```
-    get({a:{b:1}},'a.b');
+  ```js
+    EUtils.get({a:{b:1}},'a.b');
     // => 1
   ```
+
 * ## clone
+
   浅拷贝一个对象
   
   <b>Since</b>
@@ -835,12 +885,14 @@
     object:要拷贝的对象
   ```
   <b>example</b>
-  ```
-    clone({a:{b:1}});
+  ```js
+    EUtils.clone({a:{b:1}});
     // => {a:{b:1}}
   ```
+
 * ## debounce
-  函数去抖
+
+  函数防抖，指的是多次触发事件后，事件处理函数只执行一次，而且是在事件触发操作停止的时候。
   
   <b>Since</b>
   ```
@@ -858,13 +910,15 @@
     对某个函数的大量执行，经常用在scroll等DOM事件中。
   ```
   <b>example</b>
-  ```
+  ```js
     //generate the debounce function
-    let debounced = debounce(()=>{console.log(123)}, 500);
+    let debounced = EUtils.debounce(()=>{console.log(123)}, 500);
     //cancel the debounce function
-    debounced.cancel();
+
+    EUtils.debounced.cancel();
   ```
 * ## throttle
+
   函数节流
   
   <b>Since</b>
@@ -875,7 +929,6 @@
   ```
     函数节流与函数去抖类似。区别在于，如果在等待时间内一直有调用，函数去抖会一直等待下去；
     而函数节流则会在等待指定的时间满时强制执行一次函数，从而保证在每个等待时间里至少执行一次函数。
-    
   ```
   <b>Arguments</b>
   ```
@@ -883,9 +936,10 @@
     wait:毫秒数
   ```
   <b>example</b>
-  ```
+  ```js
     //generate the throttle function
-    let throttled = throttle(()=>{console.log(123)}, 500);
+    let throttled = EUtils.throttle(()=>{console.log(123)}, 500);
     //cancel the throttle function
-    throttled.cancel();
+  
+    EUtils.throttled.cancel();
   ```
