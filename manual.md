@@ -547,7 +547,7 @@
   ```
   <b>Returns</b>
   ```
-    (boolean)：true|false
+    (boolean)：true | false
   ```
   <b>Arguments</b>
   ```
@@ -555,15 +555,15 @@
   ```
   <b>Example</b>
   ```js
-    EUtils.isArray([1, 2, 3]);
+    EUtils.isArray([1, 2, 3])
     // => true
 
-    EUtils.isArray(document.body.children);
+    EUtils.isArray(document.body.children)
     // => false
 
-    EUtils.isArray('abc');
+    EUtils.isArray('abc')
     // => false
-  ```  
+  ```
 
 * ## rest
 
@@ -595,7 +595,7 @@
 
     EUtils.rest([1, 2, 3], -2);
     // => [2,3]
-  ``` 
+  ```
 
 # Storage
 * ## setCookie
